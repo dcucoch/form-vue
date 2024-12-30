@@ -1,0 +1,39 @@
+{
+    "version": "1.0.0",
+    "configurations": [
+        {
+            "name": "Start App",
+            "runtimeArgs": ["start"],
+            "env": {
+                "BROWSER": "none"
+            },
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "type": "node",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Run Chrome",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "env": {
+                "REACT_APP_API_KEY": "${env:REACT_APP_API_KEY}",
+                "GOOGLE_SHEETS_API_KEY": "${env:GOOGLE_SHEETS_API_KEY}",
+                "GOOGLE_SHEETS_SPREADSHEET_ID": "${env:GOOGLE_SHEETS_SPREADSHEET_ID}",
+                "GOOGLE_SHEETS_CLIENT_EMAIL": "${env:GOOGLE_SHEETS_CLIENT_EMAIL}",
+                "GOOGLE_SHEETS_PRIVATE_KEY": "${env:GOOGLE_SHEETS_PRIVATE_KEY}",
+                "GOOGLE_DRIVE_FOLDER_ID": "${env:GOOGLE_DRIVE_FOLDER_ID}",
+                "REACT_APP_API_URL": "${env:REACT_APP_API_URL}"
+            }
+        }
+    ],
+    "compounds": [
+        {
+          "name": "Debug App",
+          "configurations": ["Start App", "Run Chrome"],
+          "stopAll": true
+        }
+    ]
+}
