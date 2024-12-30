@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# form-vue
+This Vue.js form collects user data (name, email, birthdate) and sends it to Google Sheets via a backend API. It uses Axios for HTTP requests and validates inputs. The backend (Node.js + Express) authenticates with Google Sheets API to insert form data into a Google Sheet.
+>>>>>>> 2cf99a861ef3fd9a1246d958defde2717189de66
